@@ -6,6 +6,8 @@ use App\Entity\Calendar;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Form\Extension\Core\Type\ColorType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 
@@ -16,6 +18,7 @@ class CalendarType extends AbstractType
     {
         $builder
             ->add('title')
+            ->add('category')
             ->add('start', DateTimeType::class, [
                 'date_widget' => 'single_text'
             ])
