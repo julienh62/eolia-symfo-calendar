@@ -25,10 +25,10 @@ class Category
     private Collection $calendars;
 
 
-    public function __toString()
+   public function __toString()
     {
         return $this->title;
-    }
+    } 
 
     public function __construct()
     {

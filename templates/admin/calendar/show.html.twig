@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends 'base.calendar.html.twig' %}
 
 {% block title %}Calendar{% endblock %}
 
@@ -23,6 +23,15 @@
                 <th>End</th>
                 <td>{{ calendar.end ? calendar.end|date('Y-m-d H:i:s') : '' }}</td>
             </tr>
+              <tr>
+                <th>Prix</th>
+                <td>{{ calendar.price }}</td>
+            </tr>
+            <tr>
+                <th>Quantité</th>
+                <td>{{ calendar.quantity }}</td>
+            </tr>
+            <tr>
             <tr>
                 <th>Background_color</th>
                 <td>{{ calendar.backgroundColor }}</td>
