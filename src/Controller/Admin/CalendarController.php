@@ -31,9 +31,7 @@ class CalendarController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $calendarRepository->save($calendar, true);
 
-           // return $this->redirectToRoute('app_calendar_index', [], Response::HTTP_SEE_OTHER);
-            
-            return $this->redirectToRoute('app_admin_main', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('app_calendar_index', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('admin/calendar/new.html.twig', [
@@ -59,7 +57,7 @@ class CalendarController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $calendarRepository->save($calendar, true);
 
-            return $this->redirectToRoute('app_admin_main', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('app_calendar_index', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('admin/calendar/edit.html.twig', [

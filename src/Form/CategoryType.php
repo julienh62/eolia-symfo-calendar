@@ -2,30 +2,25 @@
 
 namespace App\Form;
 
-use App\Entity\Calendar;
+use App\Entity\Category;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class CalendarType extends AbstractType
+class CategoryType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
             ->add('title')
-            ->add('start')
-            ->add('end')
-            ->add('background_color')
-            ->add('border_color')
-            ->add('text_color')
-            ->add('category')
+            ->add('slug')
         ;
     }
 
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class' => Calendar::class,
+            'data_class' => Category::class,
         ]);
     }
 }

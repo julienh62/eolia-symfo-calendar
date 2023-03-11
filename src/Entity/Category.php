@@ -24,6 +24,12 @@ class Category
     #[ORM\OneToMany(mappedBy: 'category', targetEntity: Calendar::class)]
     private Collection $calendars;
 
+
+    public function __toString()
+    {
+        return $this->title;
+    }
+
     public function __construct()
     {
         $this->calendars = new ArrayCollection();
