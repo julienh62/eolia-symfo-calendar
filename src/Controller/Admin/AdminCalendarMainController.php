@@ -7,9 +7,9 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Repository\CalendarRepository;
 
-class MainController extends AbstractController
+class AdminCalendarMainController extends AbstractController
 {
-    #[Route('admin/calendarmain', name: 'app_admin_main')]
+    #[Route('admin/calendarmain', name: 'admin_main_calendar')]
     public function index(CalendarRepository $calendar): Response
     {
         $events = $calendar->findAll();

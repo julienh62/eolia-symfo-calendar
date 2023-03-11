@@ -1,4 +1,4 @@
-{% extends 'base.calendar.html.twig' %}
+{% extends 'base.html.twig' %}
 
 {% block title %}Calendar index{% endblock %}
 
@@ -35,8 +35,8 @@
                 <td>{{ calendar.borderColor }}</td>
                 <td>{{ calendar.textColor }}</td>
                 <td>
-                    <a href="{{ path('admin_calendar_show', {'id': calendar.id}) }}">show</a>
-                    <a href="{{ path('admin_calendar_edit', {'id': calendar.id}) }}">edit</a>
+                    <a href="{#{{ path('app_calendar_show', {'id': calendar.id}) }}#}">show</a>
+                    <a href="{#{{ path('app_calendar_edit', {'id': calendar.id}) }}#}">ajouter au panier</a>
                 </td>
             </tr>
         {% else %}
@@ -47,5 +47,4 @@
         </tbody>
     </table>
 
-    <a href="{{ path('admin_calendar_new') }}">Create new</a>
 {% endblock %}
